@@ -1,0 +1,252 @@
+section.kviz#kviz
+    .wrap
+        .title.title--red Дайте відповідь на 7 питань і отримайте всі 3 бонуси
+        .kviz-wrap--shadow
+            .kviz-wrap
+                .kviz-progress
+                    .kviz-progress__item.active
+                        //- .kviz-progress__num 1
+                        //-     .kviz-progress__num--general /7
+                        .kviz-progress__line
+                            .kviz-progress__line-text (Залишилося відповісти на 7 питань, щоб отримати гарантований подарунок)
+                            .kviz-progress__line--active
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot
+                            .kviz-progress__dot.kviz-progress__dot--active
+                        .kviz-progress__pic
+                            .circle
+                            img(src="img/preesent-persent.png", alt="preesent-persent")
+
+
+                .kviz-qa
+                    form(class="quizForm")
+                        .step-slide.step-slide--active
+                            .kviz-progress__num 1
+                                .kviz-progress__num--general /7
+                            .step-slide__title Виберіть тип вашого даху?
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step1-1")
+                                    input#step1-1.pick-item__input(type='radio', name='question1', value='Двосхилий')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q1-1.jpg", alt="Двосхилий")
+                                        .pick-item__label-text Двосхилий
+                                label.pick-item(for="step1-2")
+                                    input#step1-2.pick-item__input(type='radio', name='question1', value='Чотирьохскатний')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q1-2.jpg", alt="Чотирьохскатний")
+                                        .pick-item__label-text Чотирьохскатний
+                                label.pick-item(for="step1-3")
+                                    input#step1-3.pick-item__input(type='radio', name='question1', value='Багатоскатний')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q1-3.jpg", alt="Багатоскатний")
+                                        .pick-item__label-text Багатоскатний
+                                label.pick-item(for="step1-4")
+                                    input#step1-4.pick-item__input(type='radio', name='question1', value='Інший')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q-other.jpg", alt="Інший")
+                                        .pick-item__label-text Інший
+                            .prev-next-container
+                                .kviz__error
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 2
+                                .kviz-progress__num--general /7
+                            .step-slide__title Виберіть матеріал покрівлі?
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step2-1")
+                                    input#step2-1.pick-item__input(type='radio', name='question2', value='Металлочерепица')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-1.jpg", alt="Металлочерепица")
+                                        .pick-item__label-text Металлочерепица
+                                label.pick-item(for="step2-2")
+                                    input#step2-2.pick-item__input(type='radio', name='question2', value='Бітумна черепиця (мʼяка покрівля)')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-2.jpg", alt="Бітумна черепиця (м'яка покрівля)")
+                                        .pick-item__label-text Бітумна черепиця (м'яка покрівля)
+                                label.pick-item(for="step2-3")
+                                    input#step2-3.pick-item__input(type='radio', name='question2', value='Модульна металочерепиця')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-3.jpg", alt="Модульна металочерепиця")
+                                        .pick-item__label-text Модульна металочерепиця
+                                label.pick-item(for="step2-4")
+                                    input#step2-4.pick-item__input(type='radio', name='question2', value='Профнастил')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-4.jpg", alt="Профнастил")
+                                        .pick-item__label-text Профнастил
+                                label.pick-item(for="step2-5")
+                                    input#step2-5.pick-item__input(type='radio', name='question2', value='Композитна черепиця')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-5.jpg", alt="Композитна черепиця")
+                                        .pick-item__label-text Композитна черепиця
+                                label.pick-item(for="step2-6")
+                                    input#step2-6.pick-item__input(type='radio', name='question2', value='Натуральна черепиця')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q2-6.jpg", alt="Натуральна черепиця")
+                                        .pick-item__label-text Натуральна черепиця
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 3
+                                .kviz-progress__num--general /7
+                            .step-slide__title Виберіть орієнтовну площу вашої покрівлі?
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step3-1")
+                                    input#step3-1.pick-item__input(type='radio', name='question3', value='до 50 м.кв.')
+                                    .pick-item__label 
+                                        .pick-item__label-text до 50 м<sup>2</sup>
+                                label.pick-item(for="step3-2")
+                                    input#step3-2.pick-item__input(type='radio', name='question3', value='50-100 м.кв.')
+                                    .pick-item__label 
+                                        .pick-item__label-text 50-100 м<sup>2</sup>
+                                label.pick-item(for="step3-3")
+                                    input#step3-3.pick-item__input(type='radio', name='question3', value='150-200 м.кв.')
+                                    .pick-item__label 
+                                        .pick-item__label-text 150-200 м<sup>2</sup>
+                                label.pick-item(for="step3-4")
+                                    input#step3-4.pick-item__input(type='radio', name='question3', value='200-250 м.кв.')
+                                    .pick-item__label 
+                                        .pick-item__label-text 200-250 м<sup>2</sup>
+                                label.pick-item(for="step3-5")
+                                    input#step3-5.pick-item__input(type='radio', name='question3', value='від 250 м.кв.')
+                                    .pick-item__label 
+                                        .pick-item__label-text від 250 м<sup>2</sup>
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 4
+                                .kviz-progress__num--general /7
+                            .step-slide__title Ви будуєте новий об'єкт або робите перекриття?
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step4-1")
+                                    input#step4-1.pick-item__input(type='radio', name='question4', value='Новий обʼєкт')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q4-1.jpg", alt="Новий обʼєкт")
+                                        .pick-item__label-text Новий обʼєкт
+                                label.pick-item(for="step4-2")
+                                    input#step4-2.pick-item__input(type='radio', name='question4', value='Перекриття')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q4-2.jpg", alt="Перекриття")
+                                        .pick-item__label-text Перекриття
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 5
+                                .kviz-progress__num--general /7
+                            .step-slide__title Чи необхідний вам монтаж покрівлі? 
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step5-1")
+                                    input#step5-1.pick-item__input(type='radio', name='question5', value='Потрібен монтаж')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q5-1.jpg", alt="Потрібен монтаж")
+                                        .pick-item__label-text Потрібен монтаж
+                                label.pick-item(for="step5-2")
+                                    input#step5-2.pick-item__input(type='radio', name='question5', value='Є монтажники')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q5-2.jpg", alt="Є монтажники")
+                                        .pick-item__label-text Є монтажники
+                                label.pick-item(for="step5-3")
+                                    input#step5-3.pick-item__input(type='radio', name='question5', value='Робим монтаж своїми силами')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q5-3.jpg", alt="Робим монтаж своїми силами")
+                                        .pick-item__label-text Робим монтаж своїми силами
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 6
+                                .kviz-progress__num--general /7
+                            .step-slide__title Як скоро ви плануєте замовляти покрівлю?
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step6-1")
+                                    input#step6-1.pick-item__input(type='radio', name='question6', value='Протягом тижня')
+                                    .pick-item__label 
+                                        .pick-item__label-text Протягом тижня
+                                label.pick-item(for="step6-2")
+                                    input#step6-2.pick-item__input(type='radio', name='question6', value='Протягом 2-x тижнів ')
+                                    .pick-item__label 
+                                        .pick-item__label-text Протягом 2-x тижнів 
+                                label.pick-item(for="step6-3")
+                                    input#step6-3.pick-item__input(type='radio', name='question6', value='Протягом 1 місяця')
+                                    .pick-item__label 
+                                        .pick-item__label-text Протягом 1 місяця
+                                label.pick-item(for="step6-4")
+                                    input#step6-4.pick-item__input(type='radio', name='question6', value='Придивляюся,  від 1 до 6 місяців')
+                                    .pick-item__label 
+                                        .pick-item__label-text Придивляюся,  від 1 до 6 місяців
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide
+                            .kviz-progress__num 7
+                                .kviz-progress__num--general /7
+                            .step-slide__title Виберіть ваш подарунок до покрівлі:
+                            .kviz__ans.question__ans--radio
+                                label.pick-item(for="step7-1")
+                                    input#step7-1.pick-item__input(type='radio', name='question7', value='Безкоштовна доставка')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q7-1.jpg", alt="Безкоштовна доставка")
+                                        .pick-item__label-text Безкоштовна <span>доставка</span>
+                                label.pick-item(for="step7-2")
+                                    input#step7-2.pick-item__input(type='radio', name='question7', value='Третій рулон плівки безкоштовно')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q7-2.jpg", alt="Третій рулон плівки безкоштовно")
+                                        .pick-item__label-text Третій рулон <span>плівки безкоштовно</span>
+                                label.pick-item(for="step7-3")
+                                    input#step7-3.pick-item__input(type='radio', name='question7', value='Знижка 25% на водостоки')
+                                    .pick-item__label 
+                                        .pick-item__label-pic
+                                            img(src="img/q7-1.jpg", alt="Двосхилий")
+                                        .pick-item__label-text <span>Знижка 25%</span> на водостоки 
+                            .prev-next-container
+                                .kviz__error
+                                //- a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                                a.btn.btn-next.qa-next(href='#') Наступне питання
+                        .step-slide.step-slide--finish
+                            .step-slide__title Тест пройдений. Дякуємо за відповіді! 
+                            .step-slide__gift Заповніть форму нижче, <span class="desctop-br"><br></span>щоб зафіксувати свій подарунок <span class="desctop-br"><br></span> та отримати результат розрахунку
+                            p Введіть контактний номер телефону, за яким з вами <span class="desctop-br"><br></span> зв'яжеться менеджер і повідомить результати:
+                            .form.step-slide__form
+                                .form-line 
+                                    label
+                                        input(type="text" placeholder="Ваше ім'я" name="name2" required).rfield.name-icon
+                                    label
+                                        input(type="text" placeholder="Введіть ваш номер" name="phone" required).rfield.phone-mask
+                                //- input.btn.btn--orange(type='submit', value='Получить предложение')
+                                button.btn.btn-finish(type="submit")
+                                    a(href="#modalKviz").modal-open.kviz__btn Отримати результат
+                                .agree-line
+                                    input#modal__agree(type='checkbox', checked='', disabled='')
+                                    label(for='#modal__agree') Натискаючи на кнопку, ви приймаєте 
+                                        a(href="#") Положення 
+                                        | та 
+                                        a(href="#") Згоду на обробку персональних даних

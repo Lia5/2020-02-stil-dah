@@ -1,0 +1,135 @@
+.modal {
+    max-height: 102vh;
+    overflow: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(33, 33, 33, 0.6);
+    justify-content: center;
+    // align-items: center;
+    &__wrap {
+        max-width: 630px;
+        position: relative;
+        margin: auto;
+        @media only screen and (max-width: 620px) {
+            max-width: 100%;
+            width: 90%;
+        }   
+    }
+    &__body {
+      padding: 70px 50px 100px 63px; 
+      background: #fff url('../img/qa-thnx-bg.jpg') no-repeat;
+      background-position: bottom right;
+      background-size: 192px;
+      @media only screen and (max-width: 620px) {
+        background-size: 142px;
+        padding: 45px 23px;
+      }
+      @media only screen and (max-width: 368px) {
+        background-size: 102px;
+      }
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+        margin: 0 0 43px;
+        text-transform: uppercase;
+        color: $accent;
+
+        @media only screen and (max-width: 620px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+      text-align: left;
+      padding-right: 122px;
+      @media only screen and (max-width: 620px) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+      @media only screen and (max-width: 368px) {
+        padding-right: 67px;
+      }
+    }
+    &-open {
+        display: block;
+    }
+  }
+  .close {
+      position: absolute;
+      right: 24px;
+      top: 22px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      svg {
+        fill: #686868;
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+          opacity: .7;
+      }
+      @media only screen and (max-width: 670px) {
+        top: 17px;
+        right: 17px;
+        border-color: #000;
+      }
+  
+  }
+  
+  .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+  }
+  .disabled {
+      display: none !important;
+  }
+
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+    
+  .fadeOutUp {
+    animation-name: fadeOutUp;
+  }
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    animation-name: fadeInDown;
+  }
+  //width modal
+  #modalForm .modal__wrap {
+    max-width: 439px;
+  }
+  
