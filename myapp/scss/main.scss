@@ -99,6 +99,13 @@ ul,li {
 	font-weight: 800;
 	text-transform: uppercase;
 	margin-bottom: 53px;
+	@media screen and (max-width: 820px) {
+		font-size: 35px;
+		line-height: 1.2;
+	}
+	@media screen and (max-width: 520px) {
+		font-size: 25px;
+	}
 }
 .title {
 	font-weight: 700;
@@ -164,6 +171,7 @@ button.btn {
 	height: 300px;
 	border-radius: 50%;
 	border: 1px solid $accent;
+	opacity: 0.1;
 	&:before {
 		content: "";
 		position: absolute;

@@ -54,7 +54,15 @@ $(function() {
                     console.log(count);
                     $('.kviz-progress__dot').eq(count).addClass('kviz-progress__dot--full');
                     count = count+1;
-                }, 500 );   
+                    $('.kviz-progress__line-text span').removeClass('active').eq(count).addClass('active');
+                    console.log(count);
+                    if (count == 6) {
+                        $('.kviz-progress__pic img').attr('src', 'img/preesent-persent-open.png').css('margin', '-35px -20px -46px 0');
+                    }
+                    if (count == 7) {
+                        $('.kviz-progress__item').css('display', 'none');
+                    }
+                }, 500 );
             };
 
         $(".qa-prev").click(function(e) {
@@ -189,7 +197,7 @@ $(function() {
                         // }
                     }
                 });
-                fbq('track', 'Lead');
+                // fbq('track', 'Lead');
                 $('.btn-finish a').attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
                 $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
                 }
