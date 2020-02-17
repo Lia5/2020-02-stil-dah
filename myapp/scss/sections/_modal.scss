@@ -39,7 +39,20 @@
         border: 1px solid $accent;
         border-radius: 10px;
         z-index: 1;
-
+        @media only screen and (max-width: 620px) {
+          transform: scale(0.96, 0.94);
+          
+        }
+        @media only screen and (max-width: 540px) {
+          transform: scale(0.95, 0.94);
+          
+        }
+        @media only screen and (max-width: 420px) {
+          transform: scale(0.94, 0.94);
+        }
+        @media only screen and (max-width: 379px) {
+          transform: scale(0.93, 0.94);
+        }
       }
       @media only screen and (max-width: 805px) {
         padding: 95px 30vw 86px 40px;

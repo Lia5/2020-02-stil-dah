@@ -80,6 +80,11 @@
             </div>
             <div class="kviz-qa">
               <form class="quizForm">
+                <!-- Hidden Required Fields-->
+                <input type="hidden" name="project_name" value="Stil Dah">
+                <input type="hidden" name="admin_email" value="liaforweb@gmail.com">
+                <input type="hidden" name="form_subject" value="квиз">
+                <!-- END Hidden Required Fields-->
                 <div class="step-slide step-slide--active">
                   <div class="kviz-progress__num">1
                     <div class="kviz-progress__num--general">/7</div>
@@ -350,7 +355,7 @@
                         <input type="text" placeholder="Введіть ваш номер" name="phone" required class="rfield phone-mask">
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-finish"><a href="#modalKviz" class="modal-open kviz__btn">Отримати результат</a></button>
+                    <input type="submit" value="Отримати результат" class="btn btn-finish">
                     <div class="agree-line">
                       <input id="modal__agree" type="checkbox" checked="" disabled="">
                       <label for="#modal__agree">Натискаючи на кнопку, ви приймаєте <a href="#">Положення </a>та <a href="#">Згоду на обробку персональних даних</a></label>

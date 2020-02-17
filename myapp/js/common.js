@@ -169,42 +169,60 @@ $(function() {
     }
 
     //click on form submit button - AMO
-    $('.kviz__btn').on('click', function(){
-        $($(this).parent().parent()).each(function () {
-            var form = $(this);
-            form.find('.rfield').addClass('empty_field');
+    $('.quizForm').submit(function() { 
+        var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "../stil-dah/mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+            // alert("Thank you!");
+            $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
+            $('#modalKviz').removeClass('disabled');
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+        // $($('.btn-finish').parent()).each(function () {
+        //     var form = $(this);
+        //     console.log(form);
+        //     form.find('.rfield').addClass('empty_field');
 
-                // Функция проверки полей формы
+        //         // Функция проверки полей формы
 
-                form.find('.rfield').each(function(){
-                if($(this).val() != ''){
-                    // Если поле не пустое удаляем класс-указание
-                $(this).removeClass('empty_field');
+        //         form.find('.rfield').each(function(){
+        //         if($(this).val() != ''){
+        //             // Если поле не пустое удаляем класс-указание
+        //         $(this).removeClass('empty_field');
 
-                if (!form.find('.empty_field').length) {
-                console.log('form');
-                form = $('.quizForm');
-                jQuery.ajax({
-                    method: "POST",
-                    data: form.serialize(),
-                    // url: quizAjax.url,
-                    url: '../sendamo.php',
-                    dataType: "json",
-                    success: function (json) {
-                        // if (json.success) {
-                            // jQuery(".wizard-section").fadeOut(100);
-                            window.location.href = "/quiz-thanks/";
-                        // }
-                    }
-                });
-                // fbq('track', 'Lead');
-                $('.btn-finish a').attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
-                $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
-                }
+        //         if (!form.find('.empty_field').length) {
+        //         console.log('form');
+        //         var th = $('.quizForm');
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "../stil-dah/mail.php", //Change
+        //             data: th.serialize()
+        //             }).done(function() {
+        //                 alert("Thank you!");
+        //                 $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
+        //                 $('.kviz__btn--finish').attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
+        //                 setTimeout(function() {
+        //                     // Done Functions
+        //                     th.trigger("reset");
+        //                 }, 1000);
+        //             });
 
-                } else {}
-                });
-        })
+        //         // fbq('track', 'Lead');
+                
+                
+        //     }
+
+                
+        //         } else {}
+        //         });
+        // });
     });
     $('.phone').on('click', function(){
         fbq('track', 'Contact');
