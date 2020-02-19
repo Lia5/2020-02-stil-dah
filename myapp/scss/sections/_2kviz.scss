@@ -1,13 +1,15 @@
 .kviz {
     position: relative;
     overflow: hidden;
-    padding-top: 133px;
+    padding-top: 33px;
+    margin-top: 100px;
     padding-bottom: 158px;
     background: url('../img/roof-qa.jpg') no-repeat;
     background-size: 100%;
     background-position: bottom center;
     @media screen and (max-width: 580px) {
-        padding-top: 48px;
+        padding-top: 20px;
+        margin-top: 28px;
     }
     .wrap {
         max-width: 1310px;
@@ -270,7 +272,7 @@
         }
         &--finish {
             position: relative;
-            padding-top: 120px;
+            padding-top: 105px;
             @media screen and (max-width: 765px) {
                 padding-top: 50px;
             }
@@ -302,6 +304,15 @@
                 margin-top: 38px;
                 a {
                     padding: 14px 42px;
+                }
+                @media screen and (max-width: 580px) {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media screen and (max-width: 379px) {
+                    min-width: auto;
+                    padding: 12px 18px;
                 }
             }
             .step-slide__title {

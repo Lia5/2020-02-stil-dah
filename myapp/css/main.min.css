@@ -1054,7 +1054,8 @@ button.btn a {
 .kviz {
   position: relative;
   overflow: hidden;
-  padding-top: 133px;
+  padding-top: 33px;
+  margin-top: 100px;
   padding-bottom: 158px;
   background: url("../img/roof-qa.jpg") no-repeat;
   background-size: 100%;
@@ -1063,7 +1064,8 @@ button.btn a {
 
 @media screen and (max-width: 580px) {
   .kviz {
-    padding-top: 48px;
+    padding-top: 20px;
+    margin-top: 28px;
   }
 }
 
@@ -1419,7 +1421,7 @@ button.btn a {
 
 .step-slide--finish {
   position: relative;
-  padding-top: 120px;
+  padding-top: 105px;
 }
 
 @media screen and (max-width: 765px) {
@@ -1476,6 +1478,21 @@ button.btn a {
 
 .step-slide--finish .btn a {
   padding: 14px 42px;
+}
+
+@media screen and (max-width: 580px) {
+  .step-slide--finish .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .step-slide--finish .btn {
+    min-width: auto;
+    padding: 12px 18px;
+  }
 }
 
 @media screen and (max-width: 765px) {
