@@ -177,6 +177,7 @@ $(function() {
 			data: th.serialize()
 		}).done(function() {
             // alert("Thank you!");
+            fbq('track', 'Lead');
             $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
             $('#modalKviz').removeClass('disabled');
 			setTimeout(function() {
