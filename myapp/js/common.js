@@ -173,7 +173,7 @@ $(function() {
         var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "../stil-dah/mail.php", //Change
+			url: "../mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
             // alert("Thank you!");
